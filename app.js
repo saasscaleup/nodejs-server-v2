@@ -17,20 +17,20 @@ const server = http.createServer((req, res) => {
     if (req_path == '/') { //check the URL of the current request
 
         // set response content    
-        res.write(`<html><body><h1 style="color:blue"> [version ${version}]: This is Home Page of Server #2</h1></body></html>`);
+        res.write(`<html><body><h1 style="color:blue;text-align: center;margin-top: 100px;"> [version ${version}]: This is Home Page of Server #2</h1></body></html>`);
         res.end();
 
     }else if (req_path == "/health") {
 
         // set response content
-        res.write(`<html><body><h1 style="color:green"> [version ${version}]: This is Health Check Page of Server #2</h1></body></html>`);
+        res.write(`<html><body><h1 style="color:green;text-align: center;margin-top: 100px;"> [version ${version}]: This is Health Check Page of Server #2</h1></body></html>`);
         res.end();
 
     }else if (req_path == '/fibo') { // Incresing server CPU!!!
 
         let num = query_object.num ? query_object.num : 44;
         // set response content
-        res.write(`<html><body><h1 style="color:yellow">[version ${version}]: Fibo numbers: ${fibo(num)}</h1></body></html>`);
+        res.write(`<html><body><h1 style="color:orange;text-align: center;margin-top: 100px;">[version ${version}]: Fibo numbers: ${fibo(num)}</h1></body></html>`);
         res.end();
 
     }else{
