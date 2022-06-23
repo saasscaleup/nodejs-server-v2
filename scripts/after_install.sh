@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo 'Kill node app process'
-killall node
+echo 'update ubuntu permission'
+chown ubuntu:ubuntu -R /home/ubuntu/nodejs-server-v2
 
