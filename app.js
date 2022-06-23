@@ -17,7 +17,14 @@ const server = http.createServer((req, res) => {
     if (req_path == '/') { //check the URL of the current request
 
         // set response content    
-        res.write(`<html><body><h1 style="color:blue;text-align: center;margin-top: 100px;"> [Version ${version}]: This is Home Page!</h1></body></html>`);
+        res.write(`<html>
+                    <body>
+                        <h1 style="color:blue;text-align: center;margin-top: 100px;"> [Version ${version}]: This is Home Page!</h1>
+                        <div style="position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%)">
+                            <img src="https://picsum.photos/300/300?random=1">
+                        </div>
+                    </body>
+                   </html>`);
         res.end();
 
     }else if (req_path == "/health") {
