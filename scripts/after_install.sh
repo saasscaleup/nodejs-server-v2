@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /home/ubuntu/app/nodejs-server-v2
-pm2 restart 0
+pm2 restart nodejs-server
