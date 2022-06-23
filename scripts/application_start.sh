@@ -1,7 +1,10 @@
 #!/bin/bash
 
+echo $USER
+
 echo 'sudo su ubutnu'
 sudo su ubuntu
+echo $USER
 
 echo 'cd'
 cd /home/ubuntu/app/nodejs-server-v2
