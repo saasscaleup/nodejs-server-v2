@@ -22,4 +22,8 @@ jobs:
     - name: Create CodeDeploy Deployment
       id: deploy
       run: |
-        aws deploy create-deployment --application-name app-done-3 --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name app-done-3-DG --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
+        aws deploy create-deployment \
+        --application-name app-done-3 \
+        --deployment-group-name app-done-3-DG \
+        --deployment-config-name CodeDeployDefault.OneAtATime \
+        --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
