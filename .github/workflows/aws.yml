@@ -22,4 +22,4 @@ jobs:
     - name: Create CodeDeploy Deployment
       id: deploy
       run: |
-        aws deploy create-deployment --application-name HelloWorld_App --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name HelloWorld_DepGroup --s3-location bucket=codedeploydemobucket,bundleType=zip,key=HelloWorld_App.zip
+        aws deploy create-deployment --application-name app-done-3 --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name app-done-3-DG --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
