@@ -3,17 +3,15 @@ on:
   push:
     branches: [ main ]
 jobs:       
-
   deploy:
     runs-on: ubuntu-latest
     steps:
-
       # Step 1
       – name: Checkout to repo
       uses: actions/checkout@v2
 
       # Step 2
-      – name: Configure AWS credentials
+      – name: Set AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
